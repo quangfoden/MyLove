@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="element">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>	
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>	
+            <div></div>
+        </div>
+        <div class="container">
+          
+            <div id="first"></div>
+            <div id="second"></div>
+        </div>
+        <div id="music-container">
+            <audio id="background-music">
+                <source src="music.mp3" type="audio/mpeg">
+            </audio>
+    </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        function textAnimation() {
+            var typedFirst = new Typed('#first', {
+                strings: ['<span class="large-text">My</span> baby love <span class="large-text">you so much</span> forever you <span class="large-text">and I</span>'],
+                typeSpeed: 80,
+                showCursor: false,
+                onComplete: function (self) {
+                    setTimeout(function () {
+                        var typedSecond = new Typed('#second', {
+                            strings: ['I love you oh! I love you <span class="large-text">so much</span> forever you <span class="large-text">and I</span>'], typeSpeed: 70,
+                            showCursor: false,
+                        });
+                    }, 200);
+                }
+            });
+        }
+        function playMusic() {
+            var music = document.getElementById('background-music');
+            music.play();
+            setTimeout(() => {
+                textAnimation()
+            }, 3000);
+        }
+        document.addEventListener('click', function () {
+            playMusic();
+            document.removeEventListener('click', arguments.callee);
+        });
+    </script>
+</body>
+
+</html>
