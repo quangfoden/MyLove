@@ -177,3 +177,35 @@ body {
         opacity: 0;
     }
 }
+
+@media screen and (max-width:1024px) {
+
+    #first,
+    #second {
+        font-size: 3vw;
+    }
+
+    .large-text {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .container {
+        transform: rotate(-45deg);
+        margin-left: -30px;
+    }
+
+    #first,
+    #second {
+        font-size: 15px;
+        padding-inline: 0;
+        height: 50px;
+    }
+
+    .large-text {
+        font-size: 20px;
+    }
+
+
+}
