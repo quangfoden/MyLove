@@ -33,6 +33,27 @@ body {
     background: linear-gradient(to right, rgb(165, 2, 84), lightblue, rgb(170, 1, 142));
 }
 
+#click {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    color: #fff;
+    background: #c020a5;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#click:hover{
+    background: #f705a6;
+}
+
+#click.hidden {
+    display: none;
+}
+
 .container {
     position: absolute;
     top: 30%;
