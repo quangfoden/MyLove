@@ -33,7 +33,7 @@ body {
     background: linear-gradient(to right, rgb(165, 2, 84), lightblue, rgb(170, 1, 142));
 }
 
-#click {
+button#click {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -46,11 +46,11 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
-#click:hover{
+button#click:hover{
     background: #f705a6;
 }
 
-#click.hidden {
+button#click.hidden {
     display: none;
 }
 
