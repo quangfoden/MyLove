@@ -64,9 +64,9 @@
             }, 3000);
         }
 
-        click.addEventListener('click', function () {
-            let click = document.querySelector('#click')
-            click.classList.add('hidden')
+        let _click = document.querySelector('#click')
+        _click.addEventListener('click', function () {
+            _click.classList.add('hidden')
         })
         document.addEventListener('click', function () {
             playMusic();
