@@ -63,10 +63,11 @@
                 textAnimation()
             }, 3000);
         }
-        const click = document.querySelector('#click')
-        click.onclick = () => {
+
+        click.addEventListener('click', function () {
+            let click = document.querySelector('#click')
             click.classList.add('hidden')
-        }
+        })
         document.addEventListener('click', function () {
             playMusic();
             document.removeEventListener('click', arguments.callee);
